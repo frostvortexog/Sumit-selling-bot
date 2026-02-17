@@ -672,8 +672,7 @@ Click below to proceed.";
     // Deduct coins
     deductCoins($tg_id, $need);
 
-    
-      // Save purchase
+    // Save purchase
     $codesText = implode("\n", $codes);
     $stmt = $pdo->prepare("
       INSERT INTO purchases (tg_id, ctype, qty, cost_coins, codes_sent, created_at)
@@ -1023,4 +1022,3 @@ if ($callback) {
 }
 
 echo "OK";
-
